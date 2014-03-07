@@ -1,0 +1,27 @@
+{
+  "name": "hex2words",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "author": {
+    "name": "saibotsivad",
+    "email": "tobias@davistobias.com",
+    "url": "http://tobiaslabs.com"
+  },
+  "description": "Convert hex to PGP word lists",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tobiaslabs/hex2words.git"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap ./test/*.js"
+  },
+  "devDependencies": {
+    "tap": "~0.4.4"
+  },
+  "dependencies": {
+    "pgp-word-list": "~0.0.1"
+  }
+}
