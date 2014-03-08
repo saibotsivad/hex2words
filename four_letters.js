@@ -1,7 +1,7 @@
 var word_list = require('pgp-word-list')
 
 module.exports = function fourLetters(four_letters) {
-	if (!/^[\dA-F]+$/.test(four_letters)) {
+	if (!/^[\da-fA-F]+$/.test(four_letters)) {
 		throw new Error('non hex characters')
 	}
 
