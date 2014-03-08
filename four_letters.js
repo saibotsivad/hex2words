@@ -1,6 +1,10 @@
 var word_list = require('pgp-word-list')
 
 module.exports = function fourLetters(four_letters) {
+	if (!/^[\dA-F]+$/.test(four_letters)) {
+		throw new Error('non hex characters')
+	}
+
 	var first_so_called_byte = parseInt(four_letters.substr(0, 2), 16)
 	if (isNaN(first_so_called_byte)) {
 		throw new Error('first byte invalid')
