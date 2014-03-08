@@ -17,3 +17,13 @@ test('invalid bytes throw exceptions', function(t) {
 	}
 	t.end()
 })
+
+test('parseInt allows non-hex values, but we cannot allow them', function(t) {
+	t.plan(1)
+	try {
+		four_letters('ASDF')
+	} catch (e) {
+		t.ok(true, 'should throw exception')
+	}
+	t.end()
+})
