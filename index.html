@@ -1,1 +1,75 @@
-Testing
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>hex2words demo</title>
+        <meta name="description" content="Convert a hex string to a list of PGP words.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="hex2words demo">
+        <meta property="og:description" content="Convert a hex string to a list of PGP words.">
+        <meta name="twitter:card" content="Convert a hex string to a list of PGP words.">
+        <meta name="twitter:creator" content="@saibotsivad">
+        <meta name="twitter:url" content="http://tobiaslabs.com/hex2words/">
+        <meta name="twitter:title" content="hex2words demo">
+        <meta name="twitter:description" content="Convert a hex string to a list of PGP words.">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    </head>
+    <body>
+        <script type="text/ractive" id="the-form">
+            <div class="row" id="input">
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="doc">Paste in a document or an existing hash (<code>md5</code>, <code>sha</code>, etc., at least 4 chars long):</label>
+                            <textarea class="form-control" rows="3" id="doc" placeholder="Input text" value="{{input}}"></textarea>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="row" id="wordlist">
+                {{#words.length}}
+                    <h1>Word List <small>(from {{stringType}})</small></h1>
+                    <p class="lead">Read each word, left to right, top to bottom. You may read at a normal rate.</p>
+                    <table class="table table-striped">
+                        <tbody>
+                        {{#words:index}}
+                            <tr><td>{{index+1}}</td><td>{{wordone}}</td><td>{{wordtwo}}</td></tr>
+                        {{/words}}
+                        </tbody>
+                    </table>
+                {{/words.length}}
+            </div>
+        </script>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="github-link"><a href="https://github.com/tobiaslabs/hex2words">View on Github</a></div>
+        <div class="container" id="intro">
+            <div class="row">
+                <h1>hex2words demo</h1>
+                <p class="lead">Two users, wishing to verify that each has the same document (e.g. public key), would paste their hash or document here, then one user would read the word list out loud while the other follows on their screen to verify both users have the same word list, and therefore the same document. Read the <a href="https://wikipedia.org/wiki/PGP_word_list" title="Link to PGP Word List article on Wikipedia">Wikipedia article</a> for more information.</p>
+            </div>
+        </div>
+        <div class="container" id="main"></div>
+        <div id="footer">
+            <div class="container">
+                <p>View hex2words module on <a href="https://github.com/tobiaslabs/hex2words">github</a> or <a href="https://www.npmjs.org/package/hex2words">npm</a>. View <a href="https://github.com/tobiaslabs/hex2words/tree/gh-pages">demo source</a>.</p>
+            </div>
+        </div>
+        <script src="js/build.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-48746924-1', 'tobiaslabs.com');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 80px;
+}
+#intro {
+	max-width: 600px;
+	margin: auto;
+	padding: 0 30px 0 30px;
+}
+#main {
+	max-width: 600px;
+	margin: auto;
+	padding: 0 30px 15px 30px;
+}
+#input textarea {
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+#wordlist {
+	font-size: 180%;
+	max-width: 300px;
+	margin: auto;
+}
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 80px;
+	background-color: #f5f5f5;
+}
+#footer p {
+	font-size: 120%;
+	max-width: 500px;
+	margin: auto;
+	padding-top: 15px;
+}
+#github-link {
+	border: 0 none;
+	position: absolute;
+	right: 0;
+	top: 4em;
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform: rotate(45deg);
+}
+#github-link a {
+	color: #808080;
+	text-decoration: none;
+	font-size: x-large;
+	font-family: "sinanova-regularregular","Georgia","Cambria","Times New Roman","Times","serif";
+}
+@media only screen and (max-width: 800px) {
+	#github-link {
+		display: none;
+	}
+}
