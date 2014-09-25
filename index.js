@@ -1,18 +1,37 @@
-var four_letters = require('./four_letters.js')
+var word_list = require('pgp-word-list')
 
-var string_to_array = function(input) {
-	var output = []
-	for (var i = 0; i < input.length; i += 4) {
-		output.push(input.substr(i, 4))
-	}
-	return output
-}
+/** Parse a hex input string into PGP code words.
+ * @param input A {string} or {Buffer} containing bytes to decode.
+ * @param cb An optional callback {Function}
+ * @returns If cb is undefined, returns the array of code words.
+ */
+module.exports = function parse(input, cb) {
+  var output = [];
 
-module.exports = function parse(input) {
-	if (input.length % 4 !== 0) {
-		throw new Error('invalid string length')
-	}
-	return string_to_array(input).map(four_letters).reduce(function(memo, word_pair) {
-		return memo.concat(word_pair)
-	})
+  // avoid thrown exceptions in async code
+  try {
+    input = Buffer.isBuffer(input) ? input : new Buffer(input, 'hex');
+  }
+  catch (e) {
+    if (!cb) {
+      throw e;
+    }
+    
+    return process.nextTick(function() {
+      return cb(e);
+    });
+  }
+  
+  for (var ii = 0; ii < input.length; ++ii) {
+    output.push(word_list[input[ii]][ii % 2]);
+  }
+
+  if (!cb) {
+    return output;
+  }
+  else {
+    return process.nextTick(function() {
+      return cb(null, output);
+    });
+  }
 }
