@@ -6,32 +6,32 @@ var word_list = require('pgp-word-list')
  * @returns If cb is undefined, returns the array of code words.
  */
 module.exports = function parse(input, cb) {
-  var output = [];
+	var output = [];
 
-  // avoid thrown exceptions in async code
-  try {
-    input = Buffer.isBuffer(input) ? input : new Buffer(input, 'hex');
-  }
-  catch (e) {
-    if (!cb) {
-      throw e;
-    }
+	// avoid thrown exceptions in async code
+	try {
+		input = Buffer.isBuffer(input) ? input : new Buffer(input, 'hex');
+	}
+	catch (e) {
+		if (!cb) {
+			throw e;
+		}
     
-    return process.nextTick(function() {
-      return cb(e);
-    });
-  }
+		return process.nextTick(function() {
+			return cb(e);
+		});
+	}
   
-  for (var ii = 0; ii < input.length; ++ii) {
-    output.push(word_list[input[ii]][ii % 2]);
-  }
+	for (var ii = 0; ii < input.length; ++ii) {
+		output.push(word_list[input[ii]][ii % 2]);
+	}
 
-  if (!cb) {
-    return output;
-  }
-  else {
-    return process.nextTick(function() {
-      return cb(null, output);
-    });
-  }
+	if (!cb) {
+		return output;
+	}
+	else {
+		return process.nextTick(function() {
+			return cb(null, output);
+		});
+	}
 }
