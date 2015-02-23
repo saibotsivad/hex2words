@@ -1,5 +1,6 @@
-hex2words
-==================
+# hex2words [![Build Status](https://travis-ci.org/tobiaslabs/hex2words.svg?branch=master)](https://travis-ci.org/tobiaslabs/hex2words)
+
+[![NPM](https://nodei.co/npm/hex2words.png)](https://nodei.co/npm/hex2words/)
 
 Given a string of hex values, a PGP thumbprint or SHA
 hash for example, return an array of PGP words.
