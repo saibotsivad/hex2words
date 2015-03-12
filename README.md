@@ -20,10 +20,9 @@ Will return:
 
 ## API
 
-### `parse(input, cb)`
+### `words = parse(input)`
 Parses either a hex input string, or `Buffer`, and returns an
-array of PGP words. If `cb` is ommitted `parse` returns
-immediately.
+array of PGP words.
 
 #### input
 A hex formatted string or a `Buffer`.
@@ -34,10 +33,6 @@ var words = parse('E582')
 var words = parse(new Buffer('E582', 'hex'))
 var words = parse(new Buffer([ 229, 130 ]))
 ```
-
-#### cb
-An optional callback of the form `function (err, output) {}`
-invoked when the decoding is complete.
 
 ## Tests
 
