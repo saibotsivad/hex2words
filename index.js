@@ -10,8 +10,11 @@ function accessWordList(byteStr, index) {
  * @returns an array of code words.
  */
 module.exports = function parse(input) {
-	return input
-		.toString('hex')
+	var str = input.toString('hex')
+	if (str.length % 2) {
+		throw new Error('Expected input to be an even length.')
+	}
+	return str
 		.match(/[0-9a-z]{2}/gi)
 		.map(accessWordList)
 }

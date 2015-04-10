@@ -3,6 +3,18 @@ var parse = require('../index.js')
 var wordList = require('pgp-word-list')
 var noDuplicates = require('dupe')
 
+test('invalid string lengths throws errors', function(t) {
+	t.throws(      parse.bind(null, 'A'))
+	t.doesNotThrow(parse.bind(null, 'A1'))
+	t.throws(      parse.bind(null, 'A1A'))
+	t.doesNotThrow(parse.bind(null, 'A1A1'))
+	t.throws(      parse.bind(null, 'A1A1A'))
+	t.doesNotThrow(parse.bind(null, 'A1A1A1'))
+	t.throws(      parse.bind(null, 'A1A1A1A'))
+	t.doesNotThrow(parse.bind(null, 'A1A1A1A1'))
+	t.end()
+})
+
 test('buffer is supported', function (t) {
 	t.ok(parse(new Buffer('A1', 'hex')))
 	t.ok(parse(new Buffer('A1A1A1A1A1', 'hex')))
