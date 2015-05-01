@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "MD5": "~1.2.0",
-    "hex2words": "^1.0.1",
+    "hex2words": "^1.1.0",
     "ractive": "~0.3.9"
   },
   "devDependencies": {
