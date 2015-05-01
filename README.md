@@ -34,12 +34,6 @@ var words = parse(new Buffer('E582', 'hex'))
 var words = parse(new Buffer([ 229, 130 ]))
 ```
 
-## tests
-
-```sh
-$ npm test
-```
-
 ## license
 
 Everything in this repository is released under the [VOL](http://veryopenlicense.com/).
