@@ -1,13 +1,16 @@
 {
   "name": "hex2words-demo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./js/main.js",
+  "scripts": {
+    "build": "browserify js/main.js | uglifyjs -c -o js/build.js"
+  },
   "author": {
     "name": "saibotsivad",
     "email": "tobias@davistobias.com",
     "url": "http://tobiaslabs.com"
   },
-  "homepage": "https://github.com/tobiaslabs/hex2words.git",
+  "homepage": "http://tobiaslabs.com/hex2words",
   "description": "Demo of the hex2words module.",
   "keywords": [
     "hash",
@@ -15,17 +18,23 @@
     "word",
     "list"
   ],
-  "licenses": [ {
+  "licenses": [
+    {
       "type": "VOL",
       "url": "http://veryopenlicense.com/"
-  } ],
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tobiaslabs/hex2words.git"
   },
   "dependencies": {
-    "ractive": "~0.3.9",
     "MD5": "~1.2.0",
-    "hex2words": "~0.1.0"
+    "hex2words": "^1.0.1",
+    "ractive": "~0.3.9"
+  },
+  "devDependencies": {
+    "browserify": "^10.0.0",
+    "uglifyjs": "^2.4.10"
   }
 }
