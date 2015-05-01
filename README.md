@@ -18,7 +18,7 @@ Will return:
   ]
 ```
 
-## API
+## api
 
 ### `words = parse(input)`
 Parses either a hex input string, or `Buffer`, and returns an
@@ -34,20 +34,14 @@ var words = parse(new Buffer('E582', 'hex'))
 var words = parse(new Buffer([ 229, 130 ]))
 ```
 
-## Tests
+## tests
 
 ```sh
 $ npm test
 ```
 
-## License
+## license
 
-[Very Open License (VOL)](http://veryopenlicense.com/)
+Everything in this repository is released under the [VOL](http://veryopenlicense.com/).
 
-> The contributor(s) to this creative work voluntarily grant permission
-> to any individual(s) or entities of any kind
-> - to use the creative work in any manner,
-> - to modify the creative work without restriction,
-> - to sell the creative work or derivatives thereof for profit, and
-> - to release modifications of the creative work in part or whole under any license
-> with no requirement for compensation or recognition of any kind.
+<3
