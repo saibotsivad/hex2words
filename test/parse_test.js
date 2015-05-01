@@ -1,4 +1,4 @@
-var test = require('tap').test
+var test = require('tape')
 var parse = require('../index.js')
 var wordList = require('pgp-word-list')
 var noDuplicates = require('dupe')
