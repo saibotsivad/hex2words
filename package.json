@@ -1,6 +1,6 @@
 {
   "name": "hex2words",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./index.js",
   "author": {
     "name": "saibotsivad",
@@ -16,11 +16,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tap ./test/*.js"
+    "test": "tape ./test/*.js"
   },
   "devDependencies": {
     "dupe": "^1.0.0",
-    "tap": "~0.4.4"
+    "tape": "^4.0.0"
   },
   "dependencies": {
     "pgp-word-list": "~0.0.1"

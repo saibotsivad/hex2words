@@ -27,18 +27,6 @@ function pairIsGood(wordPair) {
 	return wordPair.length === 2
 }
 
-test('dep pgp-word-list is complete', function (t) {
-	var flattened = [].concat.apply([], wordList)
-
-	t.equal(wordList.length, 256)
-	t.equal(flattened.length, 512)
-
-	t.ok(wordList.every(pairIsGood), 'word pairs are the corrent length')
-	t.ok(flattened.every(noDuplicates), 'no duplicate words')
-
-	t.end()
-})
-
 test('four characters is correct two words', function(t) {
 	var words = parse('E582')
 	t.equals(words[0], 'topmost')
@@ -47,14 +35,9 @@ test('four characters is correct two words', function(t) {
 })
 
 test('four characters is correct two words', function(t) {
-	var correct_words = [
-		'topmost', 'Istanbul', 'Pluto', 'vagabond', 'treadmill',
-		'Pacific', 'brackish', 'dictator', 'goldfish', 'Medusa',
-		'afflict', 'bravado', 'chatter', 'revolver', 'Dupont',
-		'midsummer', 'stopwatch', 'whimsical', 'cowbell', 'bottomless'
-	]
-	var words = parse('E58294F2E9A227486E8B061B31CC528FD7FA3F19')
-	t.equals(20, words.length, 'correct number of words')
+	var correct_words = [ 'topmost', 'Istanbul', 'Pluto', 'vagabond', 'treadmill', 'Pacific', 'brackish', 'dictator' ]
+	var words = parse('E58294F2E9A22748')
+	t.equals(8, words.length, 'correct number of words')
 	for (var i = 0; i < words.length; i++) {
 		t.equals(words[i], correct_words[i])
 	}
