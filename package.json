@@ -5,7 +5,7 @@
   "author": {
     "name": "saibotsivad",
     "email": "tobias@davistobias.com",
-    "url": "http://tobiaslabs.com"
+    "url": "http://tobiaslabs.com/hex2words"
   },
   "description": "Convert hex to PGP word lists",
   "repository": {
