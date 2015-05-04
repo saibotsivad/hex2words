@@ -16,4 +16,4 @@ Check out a demo page [here][demo].
 
 [h2w]: https://www.npmjs.org/package/hex2words
 [wordlist]: https://www.npmjs.org/package/pgp-word-list
-[demo]: http://hex2words.tobiaslabs.com
+[demo]: http://tobiaslabs.com/hex2words
