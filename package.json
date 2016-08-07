@@ -5,12 +5,8 @@
   "scripts": {
     "build": "browserify js/main.js | uglifyjs -c -o js/build.js"
   },
-  "author": {
-    "name": "saibotsivad",
-    "email": "tobias@davistobias.com",
-    "url": "http://tobiaslabs.com"
-  },
-  "homepage": "http://tobiaslabs.com/hex2words",
+  "author": "saibotsivad",
+  "homepage": "http://saibotsivad.com/hex2words",
   "description": "Demo of the hex2words module.",
   "keywords": [
     "hash",
@@ -26,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tobiaslabs/hex2words.git"
+    "url": "https://github.com/saibotsivad/hex2words.git"
   },
   "dependencies": {
     "MD5": "~1.2.0",
