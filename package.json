@@ -2,15 +2,11 @@
   "name": "hex2words",
   "version": "1.1.3",
   "main": "./index.js",
-  "author": {
-    "name": "saibotsivad",
-    "email": "accounts@davistobias.com",
-    "url": "http://tobiaslabs.com/hex2words"
-  },
+  "author": "saibotsivad",
   "description": "Convert hex to PGP word lists",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tobiaslabs/hex2words.git"
+    "url": "https://github.com/saibotsivad/hex2words.git"
   },
   "directories": {
     "test": "test"
