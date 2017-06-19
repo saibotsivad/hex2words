@@ -1,9 +1,9 @@
 {
   "name": "hex2words",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "main": "./index.js",
   "author": "saibotsivad",
-  "description": "Convert hex to PGP word lists",
+  "description": "Convert hex to PGP word lists.",
   "repository": {
     "type": "git",
     "url": "https://github.com/saibotsivad/hex2words.git"
@@ -19,7 +19,7 @@
     "tape": "^4.0.0"
   },
   "dependencies": {
-    "pgp-word-list": "~0.0.1"
+    "pgp-word-list": "0.0.1"
   },
   "license": "VOL"
 }

@@ -1,4 +1,4 @@
-# hex2words [![Build Status](https://travis-ci.org/tobiaslabs/hex2words.svg?branch=master)](https://travis-ci.org/tobiaslabs/hex2words)
+# hex2words [![Build Status](https://travis-ci.org/saibotsivad/hex2words.svg?branch=master)](https://travis-ci.org/saibotsivad/hex2words)
 
 Given a string of hex values, a PGP thumbprint or SHA
 hash for example, return an array of PGP words.
@@ -19,10 +19,12 @@ Will return:
 ## api
 
 ### `words = parse(input)`
+
 Parses either a hex input string, or `Buffer`, and returns an
 array of PGP words.
 
 #### input
+
 A hex formatted string or a `Buffer`.
 
 ```js
