@@ -8,15 +8,12 @@
     "type": "git",
     "url": "https://github.com/saibotsivad/hex2words.git"
   },
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "tape ./test/*.js"
+    "test": "node test.js | tap-exit-code"
   },
   "devDependencies": {
-    "dupe": "^1.0.0",
-    "tape": "^4.0.0"
+    "tap-exit-code": "^2.0.0",
+    "zora": "^3.1.9"
   },
   "dependencies": {
     "pgp-word-list": "0.0.1"
