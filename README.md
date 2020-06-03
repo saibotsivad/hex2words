@@ -1,5 +1,7 @@
 # hex2words [![Build Status](https://travis-ci.org/saibotsivad/hex2words.svg?branch=master)](https://travis-ci.org/saibotsivad/hex2words)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/saibotsivad/hex2words.svg)](https://greenkeeper.io/)
+
 Given a string of hex values, a PGP thumbprint or SHA
 hash for example, return an array of PGP words.
 
